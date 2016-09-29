@@ -68,42 +68,6 @@ break;\
 #endif
 
 
-static GLfloat vertex[8] = {
-    1,1, //1
-    -1,1, //0
-    -1,-1, //2
-    1,-1, //3
-};
-
-static GLfloat textureCoords[8] = {
-    1,1, // 对应V1
-    0,1, // 对应V0
-    0,0, // 对应V2
-    1,0 // 对应V3
-};
-
-// 顶点着色器
-static const char shader_vsh[] =
-"attribute vec4 Position;" //  顶点位置
-"attribute vec2 TextureCoords;" // 纹理坐标
-"varying vec2 TextureCoordsOut;" //片段着色器的输入变量
-"void main(void) {"
-"gl_Position = Position;"
-"TextureCoordsOut = TextureCoords;"
-"}";
-
-// 片段着色器
-static const char shader_fsh[] =
-"precision mediump float;" //mediump
-"varying vec2 TextureCoordsOut;"
-"uniform sampler2D Texture;"
-"void main(void) {"
-"lowp vec4 rgba = vec4(0,0,0,1);"
-"rgba = texture2D(Texture,TextureCoordsOut);"
-"gl_FragColor = rgba;"
-"}";
-
-
 static inline GLuint compile_shader(GLuint type, const char * source)
 {
     

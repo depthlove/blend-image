@@ -24,8 +24,8 @@
     blendImageView = [[BlendImageView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:blendImageView];
     
-    UIImage *imageA = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"word" ofType:@"png"]];
-    UIImage *imageB = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"rose" ofType:@"png"]];
+    UIImage *imageA = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"rose" ofType:@"png"]];
+    UIImage *imageB = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"word" ofType:@"png"]];
 
     [blendImageView blendImageA:imageA andImageB:imageB];
 }

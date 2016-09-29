@@ -20,6 +20,7 @@
 		0AEF1C0C1D9D7EE1006CF311 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AEF1C0B1D9D7EE1006CF311 /* GLKit.framework */; };
 		0AEF1C101D9D7F7F006CF311 /* BlendImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF1C0F1D9D7F7F006CF311 /* BlendImageView.m */; };
 		0AEF1C121D9D825D006CF311 /* word.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF1C111D9D825D006CF311 /* word.png */; };
+		0AEF1C141D9D888B006CF311 /* rose.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF1C131D9D888B006CF311 /* rose.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		0AEF1C0E1D9D7F7F006CF311 /* BlendImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendImageView.h; sourceTree = "<group>"; };
 		0AEF1C0F1D9D7F7F006CF311 /* BlendImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlendImageView.m; sourceTree = "<group>"; };
 		0AEF1C111D9D825D006CF311 /* word.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = word.png; sourceTree = "<group>"; };
+		0AEF1C131D9D888B006CF311 /* rose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rose.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		0AEF1BE81D9D7CF7006CF311 /* BlendImage */ = {
 			isa = PBXGroup;
 			children = (
+				0AEF1C131D9D888B006CF311 /* rose.png */,
 				0AEF1C111D9D825D006CF311 /* word.png */,
 				0AEF1BEC1D9D7CF7006CF311 /* AppDelegate.h */,
 				0AEF1BED1D9D7CF7006CF311 /* AppDelegate.m */,
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AEF1BF91D9D7CF7006CF311 /* LaunchScreen.storyboard in Resources */,
+				0AEF1C141D9D888B006CF311 /* rose.png in Resources */,
 				0AEF1BF61D9D7CF7006CF311 /* Assets.xcassets in Resources */,
 				0AEF1BF41D9D7CF7006CF311 /* Main.storyboard in Resources */,
 				0AEF1C121D9D825D006CF311 /* word.png in Resources */,
