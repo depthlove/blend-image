@@ -149,7 +149,7 @@
 
 //    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 //    glClear(GL_COLOR_BUFFER_BIT);
-    glViewport(0, 0, _imageB.size.width, _imageB.size.height);
+    glViewport(10, 20, _imageB.size.width, _imageB.size.height);
     
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
     
