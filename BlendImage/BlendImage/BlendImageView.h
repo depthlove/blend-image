@@ -16,6 +16,7 @@
 #import <OpenGLES/EAGLDrawable.h>
 #import <GLKit/GLKit.h>
 #import "OpenGLESUtil.h"
+#import <CoreVideo/CoreVideo.h>
 
 
 static GLfloat vertex[8] = {
@@ -60,6 +61,10 @@ static const char* shader_fsh =
 
 @interface BlendImageView : UIView
 
+// 混合 2 张图片, blend two images
 - (void)blendImageA:(UIImage *)imageA andImageB:(UIImage *)imageB;
+
+// 摄像头数据，水印图片 watermark
+- (void)blendPixelBuffer:(CVPixelBufferRef)pixelBuffer watermark:(UIImage *)watermark;
 
 @end

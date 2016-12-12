@@ -184,4 +184,32 @@
     [self render];
 }
 
+// 摄像头数据，水印图片 watermark
+- (void)blendPixelBuffer:(CVPixelBufferRef)pixelBuffer watermark:(UIImage *)watermark {
+    @autoreleasepool {
+        _imageA = [[UIImage alloc] initWithCIImage:[CIImage imageWithCVPixelBuffer:pixelBuffer]];
+        
+        CIImage *ciImage = [CIImage imageWithCVPixelBuffer:pixelBuffer];
+        CIContext *temporaryContext = [CIContext contextWithOptions:nil];
+        CGImageRef videoImage = [temporaryContext
+                                 createCGImage:ciImage
+                                 fromRect:CGRectMake(0,
+                                                     0,
+                                                     CVPixelBufferGetWidth(pixelBuffer),
+                                                     CVPixelBufferGetHeight(pixelBuffer))
+                                 ];
+        
+        _imageA = [[UIImage alloc] initWithCGImage:videoImage];
+        CGImageRelease(videoImage);
+        
+        _imageB = watermark;
+        
+        [self loadTexture];
+        [self render];
+        
+        glDeleteTextures(1, &texNames[0]);
+        glDeleteTextures(1, &texNames[1]);
+    }
+}
+
 @end

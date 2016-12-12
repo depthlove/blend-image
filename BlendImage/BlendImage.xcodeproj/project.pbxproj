@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A8B23001DFF338400313EF1 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8B22FE1DFF338400313EF1 /* flower.png */; };
 		0A8B23011DFF338400313EF1 /* horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A8B22FF1DFF338400313EF1 /* horse.png */; };
+		0A8B23081DFF3B7400313EF1 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8B23071DFF3B7400313EF1 /* Camera.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0AEF1BEB1D9D7CF7006CF311 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF1BEA1D9D7CF7006CF311 /* main.m */; };
 		0AEF1BEE1D9D7CF7006CF311 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF1BED1D9D7CF7006CF311 /* AppDelegate.m */; };
 		0AEF1BF11D9D7CF7006CF311 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF1BF01D9D7CF7006CF311 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		0A8B22FE1DFF338400313EF1 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
 		0A8B22FF1DFF338400313EF1 /* horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horse.png; sourceTree = "<group>"; };
+		0A8B23061DFF3B7400313EF1 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		0A8B23071DFF3B7400313EF1 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
 		0AEF1BE61D9D7CF7006CF311 /* BlendImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlendImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AEF1BEA1D9D7CF7006CF311 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AEF1BEC1D9D7CF7006CF311 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A8B23051DFF3B7400313EF1 /* CameraSource */ = {
+			isa = PBXGroup;
+			children = (
+				0A8B23061DFF3B7400313EF1 /* Camera.h */,
+				0A8B23071DFF3B7400313EF1 /* Camera.m */,
+			);
+			path = CameraSource;
+			sourceTree = "<group>";
+		};
 		0AEF1BDD1D9D7CF7006CF311 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 		0AEF1BE81D9D7CF7006CF311 /* BlendImage */ = {
 			isa = PBXGroup;
 			children = (
+				0A8B23051DFF3B7400313EF1 /* CameraSource */,
 				0AEF1C131D9D888B006CF311 /* rose.png */,
 				0AEF1C111D9D825D006CF311 /* word.png */,
 				0A8B22FE1DFF338400313EF1 /* flower.png */,
@@ -203,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AEF1BF11D9D7CF7006CF311 /* ViewController.m in Sources */,
+				0A8B23081DFF3B7400313EF1 /* Camera.m in Sources */,
 				0AEF1BEE1D9D7CF7006CF311 /* AppDelegate.m in Sources */,
 				0AEF1C101D9D7F7F006CF311 /* BlendImageView.m in Sources */,
 				0AEF1BEB1D9D7CF7006CF311 /* main.m in Sources */,
