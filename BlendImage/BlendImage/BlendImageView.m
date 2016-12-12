@@ -102,6 +102,7 @@
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     
+    free(imageAData); // free memory
     
     // ---- imageB
     glGenTextures(1, &texNames[1]);
@@ -114,6 +115,8 @@
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    
+    free(imageBData); // free memory
 }
 
 - (void)render {
@@ -125,8 +128,7 @@
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
-//    glViewport(0, 0, _imageA.size.width, _imageA.size.height);
-    glViewport(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+    glViewport(0, 0, _imageA.size.width, _imageA.size.height);
     
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
     
