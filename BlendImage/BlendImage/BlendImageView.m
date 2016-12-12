@@ -21,7 +21,6 @@
     GLuint _vertexBuffer;
     GLuint _frameBuffer;
     GLuint _textureCoordBuffer0;
-    GLuint _textureCoordBuffer1;
     
     UIImage *_imageA;
     UIImage *_imageB;
@@ -69,15 +68,11 @@
     
     GLint u_texture0 = glGetUniformLocation(_glProgram, "texture0");
     glUniform1i(u_texture0, 0);
-    
-//    GLint u_texture1 = glGetUniformLocation(_glProgram, "texture1");
-//    glUniform1i(u_texture1, 1);
 }
 
 - (void)setupVBOs {
     GLint position = glGetAttribLocation(_glProgram, "position");
     GLint textureCoord0 = glGetAttribLocation(_glProgram, "textureCoord0");
-//    GLint textureCoord1 = glGetAttribLocation(_glProgram, "textureCoord1");
 
     glGenBuffers(1, &_vertexBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
@@ -90,12 +85,6 @@
     glBufferData(GL_ARRAY_BUFFER, sizeof(textureCoords), textureCoords, GL_STATIC_DRAW);
     glEnableVertexAttribArray(textureCoord0);
     glVertexAttribPointer(textureCoord0, 2, GL_FLOAT, GL_FALSE, 8, BUFFER_OFFSET(0));
-    
-//    glGenBuffers(1, &_textureCoordBuffer1);
-//    glBindBuffer(GL_ARRAY_BUFFER, _textureCoordBuffer1);
-//    glBufferData(GL_ARRAY_BUFFER, sizeof(textureCoords), textureCoords, GL_STATIC_DRAW);
-//    glEnableVertexAttribArray(textureCoord1);
-//    glVertexAttribPointer(textureCoord1, 2, GL_FLOAT, GL_FALSE, 8, BUFFER_OFFSET(0));
 }
 
 - (void)loadTexture {
@@ -115,8 +104,6 @@
     
     
     // ---- imageB
-//    glActiveTexture(GL_TEXTURE1);
-
     glGenTextures(1, &texNames[1]);
     glBindTexture(GL_TEXTURE_2D,  texNames[1]);
     UIImage *imageB = _imageB;
@@ -143,15 +130,14 @@
     
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
     
+    
     // imageB
-//    glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, texNames[1]);
-
-//    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-//    glClear(GL_COLOR_BUFFER_BIT);
+    
     glViewport(10, 20, _imageB.size.width, _imageB.size.height);
     
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+    
     
     [_glContext presentRenderbuffer:GL_RENDERBUFFER];
 }

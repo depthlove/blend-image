@@ -34,37 +34,26 @@ static GLfloat textureCoords[8] = {
 
 static const char* shader_vsh =
 "attribute vec4 position;"
-
 "attribute vec2 textureCoord0;"
-//"attribute vec2 textureCoord1;"
 
 "varying vec2 v_textureCoord0;"
-//"varying vec2 v_textureCoord1;"
 
 "void main(void) {"
 "   gl_Position = position;"
-
 "   v_textureCoord0 = textureCoord0.st;"
-//"   v_textureCoord1 = textureCoord1.st;"
 "}";
 
 static const char* shader_fsh =
 "precision mediump float;"
 
 "varying vec2 v_textureCoord0;"
-//"varying vec2 v_textureCoord1;"
 
 "uniform sampler2D texture0;"
-//"uniform sampler2D texture1;"
 
 "void main(void) {"
 "   vec4 color0;"
-//"   vec4 color1;"
-
 "   color0 = texture2D(texture0, v_textureCoord0);"
-//"   color1 = texture2D(texture1, v_textureCoord1);"
 
-//"   gl_FragColor = mix(color0, color1, color1.a);"
 "   gl_FragColor = color0;"
 "}";
 
