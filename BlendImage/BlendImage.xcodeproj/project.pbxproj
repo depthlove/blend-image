@@ -321,7 +321,7 @@
 				INFOPLIST_FILE = BlendImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stm.BlendImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stm.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -334,7 +334,7 @@
 				INFOPLIST_FILE = BlendImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.stm.BlendImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stm.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
